@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name AutoFanSwitch-rescue)(type Legacy)(uri ${KIPRJMOD}/AutoFanSwitch-rescue.lib)(options "")(descr ""))
+)

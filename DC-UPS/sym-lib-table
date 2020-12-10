@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name AutoFanSwitch-eagle-import)(type Legacy)(uri ${KIPRJMOD}/AutoFanSwitch-eagle-import.lib)(options "")(descr ""))
+)
