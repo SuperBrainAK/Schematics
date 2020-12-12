@@ -5,9 +5,9 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date ""
-Rev ""
-Comp ""
+Date "2020-12-12"
+Rev "1"
+Comp "SuperBrainAK"
 Comment1 ""
 Comment2 ""
 Comment3 ""

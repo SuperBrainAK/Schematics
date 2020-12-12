@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "DC-UPS MK2"
+Date "2020-12-12"
+Rev "1"
+Comp "SuperBrainAK"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -83,28 +83,6 @@ Wire Notes Line
 Wire Notes Line
 	5450 1000 5450 2250
 Connection ~ 4250 1950
-$Comp
-L power:+BATT #PWR?
-U 1 1 5FD0C683
-P 5250 1550
-F 0 "#PWR?" H 5250 1400 50  0001 C CNN
-F 1 "+BATT" H 5265 1723 50  0000 C CNN
-F 2 "" H 5250 1550 50  0001 C CNN
-F 3 "" H 5250 1550 50  0001 C CNN
-	1    5250 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-BATT #PWR?
-U 1 1 5FD0D05C
-P 5250 1950
-F 0 "#PWR?" H 5250 1800 50  0001 C CNN
-F 1 "-BATT" H 5265 2123 50  0000 C CNN
-F 2 "" H 5250 1950 50  0001 C CNN
-F 3 "" H 5250 1950 50  0001 C CNN
-	1    5250 1950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4250 1950 5250 1950
 Wire Wire Line
@@ -130,52 +108,6 @@ F 2 "" H 3000 3150 50  0001 C CNN
 F 3 "~" H 3000 3150 50  0001 C CNN
 	1    3000 3150
 	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+BATT #PWR?
-U 1 1 5FD11E40
-P 3000 2700
-F 0 "#PWR?" H 3000 2550 50  0001 C CNN
-F 1 "+BATT" H 3015 2873 50  0000 C CNN
-F 2 "" H 3000 2700 50  0001 C CNN
-F 3 "" H 3000 2700 50  0001 C CNN
-	1    3000 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-BATT #PWR?
-U 1 1 5FD12560
-P 3500 2700
-F 0 "#PWR?" H 3500 2550 50  0001 C CNN
-F 1 "-BATT" H 3515 2873 50  0000 C CNN
-F 2 "" H 3500 2700 50  0001 C CNN
-F 3 "" H 3500 2700 50  0001 C CNN
-	1    3500 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3000 2700 3000 3000
-$Comp
-L power:+24V #PWR?
-U 1 1 5FD12F33
-P 3000 3850
-F 0 "#PWR?" H 3000 3700 50  0001 C CNN
-F 1 "+24V" H 3015 4023 50  0000 C CNN
-F 2 "" H 3000 3850 50  0001 C CNN
-F 3 "" H 3000 3850 50  0001 C CNN
-	1    3000 3850
-	1    0    0    1   
-$EndComp
-$Comp
-L power:-VSW #PWR?
-U 1 1 5FD14D72
-P 3500 3850
-F 0 "#PWR?" H 3500 3950 50  0001 C CNN
-F 1 "-VSW" H 3515 4023 50  0000 C CNN
-F 2 "" H 3500 3850 50  0001 C CNN
-F 3 "" H 3500 3850 50  0001 C CNN
-	1    3500 3850
-	1    0    0    1   
 $EndComp
 Wire Wire Line
 	3000 3850 3000 3600
@@ -204,15 +136,12 @@ LTC3780 Boost/Buck\n12.1v out\n11v UVLO
 Wire Wire Line
 	4000 3500 3500 3500
 Wire Wire Line
-	3500 2700 3500 3500
-Connection ~ 3500 3500
-Wire Wire Line
 	3500 3500 3500 3850
 Connection ~ 4000 3500
 Wire Wire Line
 	3000 3300 4250 3300
 Wire Wire Line
-	4000 3500 5500 3500
+	4000 3500 5400 3500
 $Comp
 L Device:CP1 C1
 U 1 1 5FD1A705
@@ -324,7 +253,7 @@ F 3 "~" H 5850 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5500 3200 5250 3200
+	5500 3200 5300 3200
 Wire Wire Line
 	5500 3200 5700 3200
 Wire Wire Line
@@ -336,7 +265,7 @@ Wire Wire Line
 	7250 3200 7250 3600
 Connection ~ 5850 3200
 Wire Wire Line
-	5500 3500 5850 3500
+	5500 3500 5600 3500
 Wire Wire Line
 	7050 3500 7050 3600
 Connection ~ 5500 3500
@@ -467,4 +396,102 @@ Connection ~ 7050 4200
 Wire Wire Line
 	7250 4200 7250 4350
 Connection ~ 7250 4200
+Wire Notes Line
+	5750 2650 5750 2950
+Wire Notes Line
+	5750 2950 6300 2950
+Wire Notes Line
+	6300 2950 6300 2650
+Wire Notes Line
+	6300 2650 5750 2650
+Text Notes 5800 2850 0    50   ~ 0
+LM2596 9v
+Wire Wire Line
+	5500 3200 5500 2750
+Wire Wire Line
+	5500 2750 5750 2750
+Wire Wire Line
+	5600 3500 5600 2850
+Connection ~ 5600 3500
+Wire Wire Line
+	5600 3500 5850 3500
+Wire Wire Line
+	5600 2850 6550 2850
+Wire Wire Line
+	6300 2750 6550 2750
+$Comp
+L power:+9V #PWR?
+U 1 1 5FD72C86
+P 6550 2750
+F 0 "#PWR?" H 6550 2600 50  0001 C CNN
+F 1 "+9V" H 6565 2923 50  0000 C CNN
+F 2 "" H 6550 2750 50  0001 C CNN
+F 3 "" H 6550 2750 50  0001 C CNN
+	1    6550 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FD740DB
+P 6550 2850
+F 0 "#PWR?" H 6550 2600 50  0001 C CNN
+F 1 "GND" H 6555 2677 50  0000 C CNN
+F 2 "" H 6550 2850 50  0001 C CNN
+F 3 "" H 6550 2850 50  0001 C CNN
+	1    6550 2850
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	5250 4000 5250 4300
+Wire Notes Line
+	5250 4300 4500 4300
+Wire Notes Line
+	4500 4300 4500 4000
+Wire Notes Line
+	4500 4000 5250 4000
+Text Notes 4550 4200 0    50   ~ 0
+Auto Fan Switch
+Wire Wire Line
+	5300 3200 5300 4100
+Wire Wire Line
+	5300 4100 5250 4100
+Connection ~ 5300 3200
+Wire Wire Line
+	5300 3200 5250 3200
+Wire Wire Line
+	5400 3500 5400 4250
+Wire Wire Line
+	5400 4250 4300 4250
+Connection ~ 5400 3500
+Wire Wire Line
+	5400 3500 5500 3500
+Wire Wire Line
+	4500 4100 4300 4100
+Text GLabel 5250 1950 1    50   Output ~ 0
+-Batt
+Text GLabel 5250 1550 1    50   Output ~ 0
++Batt
+Text GLabel 3000 2650 1    50   Input ~ 0
++Batt
+Wire Wire Line
+	3000 2650 3000 3000
+Wire Wire Line
+	3500 3500 3500 2650
+Connection ~ 3500 3500
+Text GLabel 3500 2650 1    50   Input ~ 0
+-Batt
+Text GLabel 3000 3850 2    50   Input ~ 0
++20v
+Text GLabel 3500 3850 2    50   Input ~ 0
+0v
+Wire Notes Line
+	4300 4000 3800 4000
+Wire Notes Line
+	3800 4000 3800 4450
+Wire Notes Line
+	3800 4450 4300 4450
+Wire Notes Line
+	4300 4450 4300 4000
+Text Notes 4100 4250 2    50   ~ 0
+Fan
 $EndSCHEMATC
