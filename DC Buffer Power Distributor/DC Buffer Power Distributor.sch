@@ -142,7 +142,7 @@ F 3 "~" H 2650 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Converter_DCDC:FUJITSU_Auto_Air_Adapter SE1
+L SBAK~Modules:FUJITSU_Auto_Air_Adapter SE1
 U 1 1 61178037
 P 4750 2800
 F 0 "SE1" H 4750 3215 50  0000 C CNN
@@ -155,7 +155,7 @@ $EndComp
 Wire Wire Line
 	2400 2900 2900 2900
 $Comp
-L Converter_DCDC:DPS5005 BU1
+L SBAK~Modules:DPS5005 BU1
 U 1 1 6117EC6E
 P 3250 2800
 F 0 "BU1" H 3250 3215 50  0000 C CNN
